@@ -5,6 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anubhav Silas | Guitarist & Music Producer</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .carousel-track {
+      display: flex;
+      animation: scroll 20s linear infinite;
+    }
+    .carousel-item {
+      min-width: 100%;
+      flex: 0 0 auto;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    .carousel-item a {
+      display: block;
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .carousel-item a:hover {
+      background: #333;
+      color: #ffcc70;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-300%); }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -70,11 +108,19 @@
 
   <section id="featured">
     <h2>Featured</h2>
-    <ul>
-      <li><a href="https://theindianmusicdiaries.com/anubhav-silas-debut-ep-twenty-four-hours-a-solid-self-produced-modern-prog-metal-record/" target="_blank">Indian Music Diaries – Anubhav Silas' debut EP review</a></li>
-      <li><a href="https://rollingstoneindia.com/rsdailymusic-heres-what-were-listening-to-today-98/" target="_blank">Rolling Stone India – RSDailyMusic Feature</a></li>
-      <li><a href="https://gogomagazine.in/anubhav-silas-a-djent-instrumental-independent-artist-based-in-new-delhi/" target="_blank">Gogo Magazine – Artist Spotlight</a></li>
-    </ul>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <a href="https://theindianmusicdiaries.com/anubhav-silas-debut-ep-twenty-four-hours-a-solid-self-produced-modern-prog-metal-record/" target="_blank">Indian Music Diaries – EP Review</a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://rollingstoneindia.com/rsdailymusic-heres-what-were-listening-to-today-98/" target="_blank">Rolling Stone India – RSDailyMusic Feature</a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://gogomagazine.in/anubhav-silas-a-djent-instrumental-independent-artist-based-in-new-delhi/" target="_blank">Gogo Magazine – Artist Spotlight</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
