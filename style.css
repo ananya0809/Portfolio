@@ -1,21 +1,22 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: white;
+    line-height: 1.6;
+    background: #111;
+    color: #eee;
+  }
+  header, footer {
+    background: #222;
+    padding: 2rem;
     text-align: center;
-    padding: 1em 0;
-}
-
-section {
-    margin: 2em;
-    padding: 1em;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+  }
+  nav a {
+    margin: 0 1rem;
+    color: #0ff;
+    text-decoration: none;
+  }
+  section {
+    padding: 2rem;
+  }
+  
