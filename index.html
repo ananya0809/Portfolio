@@ -42,21 +42,100 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-300%); }
     }
+    .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-background {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slide 30s infinite alternate ease-in-out;
+}
+
+.carousel-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #cccccc;
+}
+
+.hero-content nav a {
+  margin: 0 1rem;
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-content nav a:hover {
+  color: #ffcc70;
+}
+
   </style>
 </head>
 <body>
-  <header>
-    <h1>Anubhav Silas</h1>
-    <p>Guitarist | Music Producer</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#discography">Discography</a>
-      <a href="#experience">Experience</a>
-      <a href="#music">Music</a>
-      <a href="#featured">Featured</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header class="hero">
+    <div class="carousel-container">
+        <div class="carousel-background">
+        <img src="assets/images/banner1.jpg" alt="Banner 1">
+        <img src="assets/images/banner2.jpg" alt="Banner 2">
+        <img src="assets/images/banner3.jpg" alt="Banner 3">
+        </div>
+    </div>
+    <div class="hero-content">
+        <h1>Anubhav Silas</h1>
+        <p>Guitarist | Music Producer</p>
+        <nav>
+        <a href="#about">About</a>
+        <a href="#discography">Discography</a>
+        <a href="#experience">Experience</a>
+        <a href="#music">Music</a>
+        <a href="#featured">Featured</a>
+        <a href="#contact">Contact</a>
+        </nav>
+    </div>
+    </header>
+      
 
   <section id="about">
     <h2>About</h2>
