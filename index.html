@@ -49,33 +49,17 @@
   overflow: hidden;
 }
 
-.carousel-container {
-  position: absolute;
-  top: 0;
-  left: 0;
+.hero {
+  position: relative;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.carousel-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  width: 300%;
-  height: 100%;
-  animation: slide 30s infinite alternate ease-in-out;
-}
-
-.carousel-background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@keyframes slide {
-  0% { transform: translateX(0); }
-  33% { transform: translateX(-100%); }
-  66% { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content {
@@ -185,41 +169,26 @@
   </style>
 </head>
 <body>
-<header class="hero">
-    <div class="carousel-container">
-        <div class="carousel-background">
-        <img src="assets/images/AS1.jpg" alt="Anubhav Silas">
-        <img src="assets/images/AS2.jpg" alt="Anubhav Silas">
-        <img src="assets/images/AS4.jpg" alt="Anubhav Silas">
-        <img src="assets/images/AS6.jpg" alt="Anubhav Silas">
-        <img src="assets/images/AS7.jpg" alt="Anubhav Silas">
-        <img src="assets/images/AS8.jpg" alt="Anubhav Silas">
-        <img src="assets/images/AS9.jpg" alt="Anubhav Silas">
-        <img src="assets/images/AS10.jpg" alt="Anubhav Silas">
-        <img src="assets/images/AS11.jpg" alt="Anubhav Silas">
-        <img src="assets/images/AS12.jpg" alt="Anubhav Silas">
-
+    <header class="hero" style="background-image: url('assets/images/AS1.jpg'); background-size: cover; background-position: center; height: 100vh;">
+        <div class="hero-content">
+          <h1>Anubhav Silas</h1>
+          <p>Guitarist | Music Producer</p>
+          <nav>
+            <a href="#discography">Discography</a>
+            <a href="#videos">Videos</a>
+            <a href="#featured">Featured</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
         </div>
-    </div>
-    <div class="hero-content">
-        <h1>Anubhav Silas</h1>
-        <p>Guitarist | Music Producer</p>
-        <nav>
-        <a href="#discography">Discography</a>
-        <a href="#videos">Videos</a>
-        <a href="#featured">Featured</a>
-        <a href="#about">About</a> 
-        <a href="#contact">Contact</a>
-        </nav>
-    </div>
-    </header>
+      </header>
 
     <section id="discography">
         <h2>Discography</h2>
         
         <div class="discography-grid">
           <div class="release-card">
-            <img src="assets/images/twentyfourhours_cover.jpg" alt="Twenty Four Hours Cover">
+            <img src="assets/images/Twenty Four Hours.jpg" alt="Twenty Four Hours Album Art">
             <div class="release-meta">
               <h3>Twenty Four Hours <span class="tag">EP</span></h3>
               <p class="release-date">Dec 20, 2024</p>
@@ -237,7 +206,7 @@
           </div>
       
           <div class="release-card">
-            <img src="assets/images/rifa_cover.jpg" alt="Rifa Cover">
+            <img src="assets/images/rifa.jpg" alt="Rifa Album Art">
             <div class="release-meta">
               <h3>Rifa <span class="tag">Album</span></h3>
               <p class="release-date">2023</p>
@@ -245,17 +214,17 @@
               <button class="toggle-songs">View Songs ▼</button>
               <ul class="song-list">
                 <li>Dhoondhta Mai</li>
-                <li>Fanaa</li>
-                <li>Raaste</li>
-                <li>Manzil</li>
-                <li>Intezaar</li>
+                <li>Maafi</li>
+                <li>Kahaani</li>
+                <li>Aa Bhi Jaao</li>
+                <li>Aaj Bhi</li>
               </ul>
               <a class="listen-link" href="https://www.youtube.com/watch?v=UDTqBCPB-6I" target="_blank">Listen on YouTube</a>
             </div>
           </div>
       
           <div class="release-card single">
-            <img src="assets/images/sunshade_cover.jpg" alt="Sunshade Cover">
+            <img src="assets/images/SUNSHADE.jpg" alt="Sunshade Album Art">
             <div class="release-meta">
               <h3>Sunshade <span class="tag">Single</span></h3>
               <p class="release-date">2021</p>
@@ -265,7 +234,7 @@
           </div>
       
           <div class="release-card single">
-            <img src="assets/images/psalm24_cover.jpg" alt="Psalm 24 Cover">
+            <img src="assets/images/PSALM24.jpg" alt="Psalm 24 Album Art">
             <div class="release-meta">
               <h3>Psalm 24 <span class="tag">Single</span></h3>
               <p class="release-date">2020</p>
