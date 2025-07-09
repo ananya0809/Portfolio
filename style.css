@@ -35,7 +35,7 @@
     margin-top: 0.5rem;
   }
   
-  nav {
+  /* nav {
     position: absolute;
     top: 0;
     width: 100%;
@@ -44,12 +44,12 @@
     gap: 3rem;
     padding: 1.5rem 0;
     background: rgba(0, 0, 0, 0.4); /* semi-transparent background */
-    z-index: 100;
+   /* z-index: 100;
     backdrop-filter: blur(4px);
     transition: background 0.3s ease;
-  }
+  } */
   
-  nav a {
+  /*nav a {
     color: #00ffff;
     font-weight: bold;
     font-size: 1.1rem;
@@ -59,13 +59,13 @@
   
   nav a:hover {
     color: #ffcc70;
-  }
+  } */
   
 
 
-  /* nav {
+  nav {
     margin-top: 1.5rem;
-  } */
+  }
   
   /* nav a {
     margin: 0 1rem;
