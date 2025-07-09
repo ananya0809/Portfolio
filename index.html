@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anubhav Silas | Guitarist & Music Producer</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anubhav Silas | Guitarist & Music Producer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   <style>
     .carousel {
       display: flex;
@@ -62,7 +66,18 @@
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
+  z-index: 1;
+}
 .hero-content {
+  z-index: 2;
+}
+
+/* .hero-content {
   position: relative;
   z-index: 10;
   text-align: center;
@@ -70,7 +85,7 @@
   transform: translateY(-50%);
   color: white;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
+} */
 
 .hero-content h1 {
   font-size: 4rem;
@@ -94,6 +109,30 @@
 .hero-content nav a:hover {
   color: #ffcc70;
 }
+
+.release-card {
+  background: #121212;
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+.release-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.15);
+}
+
+.release-card,
+.video-wall iframe {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .release {
   display: flex;
@@ -169,7 +208,7 @@
   </style>
 </head>
 <body>
-    <header class="hero" style="background-image: url('assets/images/AS1.jpg'); background-size: cover; background-position: center; height: 100vh;">
+    <header class="hero" style="background-image: url('assets/images/AS7.jpg'); background-size: cover; background-position: center; height: 100vh;">
         <div class="hero-content">
           <h1>Anubhav Silas</h1>
           <p>Guitarist | Music Producer</p>
@@ -325,6 +364,27 @@
         }
       });
     });
+
+        // fade in elements on scroll
+    const faders = document.querySelectorAll('.release-card, .video-wall iframe');
+
+    const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("fade-in");
+        appearOnScroll.unobserve(entry.target);
+    });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+    });
+
   </script>
   
 </body>
