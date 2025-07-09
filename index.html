@@ -123,11 +123,27 @@
 }
 
 .release-card,
-.video-wall iframe {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+.video-wall {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
 }
+
+.video-wall iframe {
+  width: 360px;
+  height: 215px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.video-wall iframe:hover {
+  transform: scale(1.03);
+}
+
 .fade-in {
   opacity: 1;
   transform: translateY(0);
