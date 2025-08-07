@@ -239,7 +239,63 @@
         </div>
       </header>
 
+
+    <!-- Updated Discography Section with Enhancements -->
     <section id="discography">
+      <h2>Discography</h2>
+      <div class="theme-toggle">
+        <button id="themeBtn">Toggle Theme</button>
+      </div>
+
+      <div class="discography-grid">
+        <!-- EP: Twenty Four Hours -->
+        <div class="album-card">
+          <div class="overlay">
+            <a href="https://open.spotify.com/album/1PYO6MLzZ0kNSk0yKZCjsq" target="_blank" class="listen-btn">Listen on Spotify</a>
+          </div>
+          <img src="assets/images/Twenty Four Hours.jpg" alt="Twenty Four Hours">
+          <h3>Twenty Four Hours <span class="tag">EP</span></h3>
+        </div>
+
+        <!-- Album: Rifa
+        <div class="album-card">
+          <div class="overlay">
+            <a href="https://open.spotify.com/album/0oyXiDWzIVbBt7IKby3bLP" target="_blank" class="listen-btn">Listen on Spotify</a>
+          </div>
+          <img src="assets/images/rifa_cover.jpg" alt="Rifa">
+          <h3>Rifa <span class="tag">Album</span></h3>
+        </div> -->
+
+        <!-- Single: Sunshade -->
+        <div class="album-card">
+          <div class="overlay">
+            <a href="https://open.spotify.com/track/4FdOQ8HFcoJgrhwONa0qRR" target="_blank" class="listen-btn">Listen on Spotify</a>
+          </div>
+          <img src="assets/images/Sunshade.jpg" alt="Sunshade">
+          <h3>Sunshade <span class="tag">Single</span></h3>
+        </div>
+
+        <!-- Single: Psalm 24 -->
+        <div class="album-card">
+          <div class="overlay">
+            <a href="https://open.spotify.com/track/1rgXRRzDEONXtD4OKvYhTC" target="_blank" class="listen-btn">Listen on Spotify</a>
+          </div>
+          <img src="assets/images/Psalm 24.jpg" alt="Psalm 24">
+          <h3>Psalm 24 <span class="tag">Single</span></h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Theme + Overlay Script -->
+    <script>
+      const themeBtn = document.getElementById('themeBtn');
+      themeBtn.onclick = () => {
+        document.body.classList.toggle('dark');
+      };
+    </script>
+
+
+    <!-- <section id="discography">
         <h2>Discography</h2>
         
         <div class="discography-grid">
@@ -279,14 +335,14 @@
             </div>
           </div> -->
       
-          <div class="release-card single">
+          <!-- <div class="release-card single">
             <img src="assets/images/SUNSHADE.jpg" alt="Sunshade Album Art">
             <div class="release-meta">
                 <a class="listen-link" href="https://www.youtube.com/watch?v=HKOha1FwvGo" target="_blank"><h3>Sunshade <span class="tag">(Single)</span></h3></a>
               <p class="release-date">Februrary 6, 2021</p>
               <p class="release-desc">An ambient-metal single that walks the line between warmth and intensity.</p>
               <!-- <a class="listen-link" href="https://www.youtube.com/watch?v=HKOha1FwvGo" target="_blank">Listen on YouTube</a> -->
-            </div>
+            <!-- </div>
           </div>
       
           <div class="release-card single">
@@ -296,7 +352,7 @@
               <p class="release-date">June 12, 2020</p>
               <p class="release-desc">Christian djent meets cinematic moodscapes in this spiritual instrumental piece.</p>
               <!-- <a class="listen-link" href="https://www.youtube.com/watch?v=XCoHfZe5ebU" target="_blank">Listen on YouTube</a> -->
-            </div>
+            <!-- </div>
           </div>
         </div>
       </section>
@@ -309,7 +365,7 @@
             button.textContent = list.classList.contains('show') ? 'Hide Songs ▲' : 'View Songs ▼';
           });
         });
-      </script>
+      </script> --> --> --> -->
 
     
 <section id="work">
