@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
   <style>
     .carousel {
       display: flex;
@@ -113,7 +112,7 @@
 .release-card {
   background: #121212;
   border-radius: 15px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 0 transparent;
 }
@@ -122,7 +121,7 @@
   box-shadow: 0 10px 25px rgba(0, 255, 255, 0.15);
 }
 
-.release-card,
+/* .release-card, */
 .video-wall {
   display: flex;
   flex-wrap: wrap;
@@ -225,17 +224,18 @@
 </head>
 <body>
     <header class="hero" style="background-image: url('assets/images/AS7.jpg'); background-size: cover; background-position: center; height: 100vh;">
-        <div class="hero-content">
-          <h1>Anubhav Silas</h1>
-          <p>Guitarist | Music Producer</p>
-          <nav>
+      <nav class="nav-overlay">
             <a href="#discography">Discography</a>
             <a href="#work">Work</a>
             <a href="#bio">Bio</a>
             <a href="#featured">Featured</a>
             <a href="#videos">Videos</a>
             <a href="#contact">Contact</a>
-          </nav>
+          </nav>  
+      
+      <div class="hero-content">
+          <h1>Anubhav Silas</h1>
+          <p>Guitarist | Music Producer</p>
         </div>
       </header>
 

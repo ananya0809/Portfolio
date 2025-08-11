@@ -142,8 +142,9 @@
   @media (max-width: 768px) {
     .discography-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
+        align-items: start;
         padding: 2rem 0;
       }
       
@@ -194,6 +195,13 @@
     .hero-content h1 {
       font-size: 2rem;
     }
+    /* Phones: collapse to one column */
+  @media (max-width: 600px) {
+    .discography-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   }
   
   
