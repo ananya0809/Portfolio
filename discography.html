@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discography | Anubhav Silas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="topnav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Anubhav Silas</a>
+      <div class="links">
+        <a href="discography.html" aria-current="page">Discography</a>
+        <a href="work.html">Work</a>
+        <a href="bio.html">Bio</a>
+        <a href="featured.html">Featured</a>
+        <a href="videos.html">Videos</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" style="background-image:url('assets/images/AS1.jpg')">
+    <div class="hero-content">
+      <h1>Discography</h1>
+      <p>Click cover art to listen.</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="two-col">
+      <!-- EP -->
+      <article class="album-card">
+        <div class="album-media">
+          <img src="assets/images/Twenty Four Hours.jpg" alt="Twenty Four Hours cover" />
+          <div class="album-hover">
+            <a class="pill" href="https://open.spotify.com/album/1PYO6MLzZ0kNSk0yKZCjsq" target="_blank" rel="noopener">Listen on Spotify</a>
+          </div>
+        </div>
+        <h3 class="album-title">Twenty Four Hours <span class="tag">EP</span></h3>
+        <p class="album-meta">September 9, 2022</p>
+        <button class="toggle-songs" aria-expanded="false">View Songs ▼</button>
+        <ul class="song-list">
+          <li>Intro</li><li>Prime</li><li>Noontide (feat. Ankit Silas)</li><li>Bash (feat. Ritwik Bhattacharya)</li><li>Grey Twilight</li>
+        </ul>
+      </article>
+
+      <!-- Single -->
+      <article class="album-card">
+        <div class="album-media">
+          <img src="assets/images/SUNSHADE.jpg" alt="Sunshade cover" />
+          <div class="album-hover">
+            <a class="pill" href="https://open.spotify.com/track/4FdOQ8HFcoJgrhwONa0qRR" target="_blank" rel="noopener">Listen on Spotify</a>
+          </div>
+        </div>
+        <h3 class="album-title">Sunshade <span class="tag">Single</span></h3>
+        <p class="album-meta">February 6, 2021</p>
+      </article>
+
+      <!-- Single -->
+      <article class="album-card">
+        <div class="album-media">
+          <img src="assets/images/PSALM24.jpg" alt="Psalm 24 cover" />
+          <div class="album-hover">
+            <a class="pill" href="https://open.spotify.com/track/1rgXRRzDEONXtD4OKvYhTC" target="_blank" rel="noopener">Listen on Spotify</a>
+          </div>
+        </div>
+        <h3 class="album-title">Psalm 24 <span class="tag">Single</span></h3>
+        <p class="album-meta">June 12, 2020</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer"><p>© 2025 Anubhav Silas.</p></footer>
+
+  <script>
+    document.querySelectorAll('.toggle-songs').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const list=btn.nextElementSibling, open=list.style.display==='block';
+        list.style.display=open?'none':'block';
+        btn.textContent=open?'View Songs ▼':'Hide Songs ▲';
+        btn.setAttribute('aria-expanded', String(!open));
+      });
+    });
+  </script>
+<script src="app.js" defer></script>
+
+</body>
+</html>
