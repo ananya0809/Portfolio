@@ -17,24 +17,43 @@
 
 <main class="section">
     <!-- Contact Form -->
-    <div class="contact-form-container">
-    <h2>Send a Message</h2>
-    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required>
+    <section class="contact-form">
+        <h2 class="section-title">Send a Message</h2>
 
-        <label for="email">Email ID</label>
-        <input type="email" id="email" name="_replyto" required>
+        <!-- Formspree endpoint: replace with your real ID -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form-card" novalidate>
+            <!-- Honeypot -->
+            <input type="text" name="_gotcha" class="hp" autocomplete="off" tabindex="-1" aria-hidden="true">
 
-        <label for="phone">Phone Number (with country code)</label>
-        <input type="tel" id="phone" name="phone" placeholder="+91 12345 67890" required>
+            <div class="form-grid">
+            <div class="form-field">
+                <label for="cf-name">Full Name *</label>
+                <input id="cf-name" name="name" type="text" required>
+            </div>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="10" required></textarea>
+            <div class="form-field">
+                <label for="cf-email">Email ID *</label>
+                <input id="cf-email" name="_replyto" type="email" required>
+            </div>
 
-        <button type="submit">Send</button>
-    </form>
-    </div>
+            <div class="form-field form-field-span2">
+                <label for="cf-phone">Phone Number (with country code)</label>
+                <input id="cf-phone" name="phone" type="tel" placeholder="+91 12345 67890">
+            </div>
+
+            <div class="form-field form-field-span2">
+                <label for="cf-message">Message *</label>
+                <textarea id="cf-message" name="message" rows="6" required></textarea>
+            </div>
+            </div>
+
+            <div class="form-actions">
+            <button type="submit" class="btn-primary">Send</button>
+            <p class="form-note">You’ll get a confirmation email on first use.</p>
+            </div>
+        </form>
+    </section>
+
   <div class="contact-grid">
     <div>
       <p>Phone: <a href="tel:919821274524">+91 98212 74524</a></p>
