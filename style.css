@@ -75,7 +75,7 @@ body{
 .album-title .tag{background:var(--gold); color:#111; padding:.15rem .5rem; border-radius:.5rem; font-size:.8rem; margin-left:.35rem}
 .album-meta{color:var(--muted); font-size:.95rem; margin-bottom:.35rem}
 .toggle-songs{appearance:none; background:none; border:none; cursor:pointer; color:var(--gold); font-weight:800; margin:.4rem 0 .2rem}
-.song-list{display:none; margin:.25rem 0 0 1rem}
+.song-list{margin:.25rem 0 0 1rem}
 
 /* ===== Featured ===== */
 .feature-list{display:grid; gap:.85rem; margin-top:.5rem}
@@ -129,22 +129,6 @@ body{
   color: var(--gold);
   text-decoration: underline; 
 }
-/* Contact page links - white
-#contact a {
-  color: #fff;
-}
 
-#contact a:hover {
-  color: #ccc; /* Softer white/grey on hover */
-/* } */
-/* Contact links color override */
-#contact a {
-  color: white;
-  text-decoration: none; /* Optional: removes underline */
-}
-
-#contact a:hover {
-  color: #ccc; /* Optional: light gray hover effect */
-}
 
 
