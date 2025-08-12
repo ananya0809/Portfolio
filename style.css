@@ -129,11 +129,21 @@ body{
   text-decoration: underline;
 }
 /* Contact page links - white */
-.contact-page a {
+#contact a {
   color: #fff;
 }
 
-.contact-page a:hover {
-  color: #ccc;
+#contact a:hover {
+  color: #ccc; /* Softer white/grey on hover */
 }
+/* Contact links color override */
+#contact a {
+  color: white;
+  text-decoration: none; /* Optional: removes underline */
+}
+
+#contact a:hover {
+  color: #ccc; /* Optional: light gray hover effect */
+}
+
 
