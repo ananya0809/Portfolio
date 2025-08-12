@@ -128,3 +128,12 @@ body{
   color: var(--gold);
   text-decoration: underline;
 }
+/* Contact page links - white */
+.contact-page a {
+  color: #fff;
+}
+
+.contact-page a:hover {
+  color: #ccc;
+}
+
