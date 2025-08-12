@@ -174,5 +174,14 @@ body{
   text-decoration: underline;
 }
 
+/* Contact page link color override */
+#contact a {
+  color: white;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: #ffcc70; /* or any hover color you prefer */
+}
 
 
