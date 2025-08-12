@@ -77,20 +77,31 @@
 })();
 
 /* -------------------- SONG LIST TOGGLES -------------------- */
-// Matches your existing markup: button.toggle-songs + ul.song-list
+// Robust: find the list inside the same .album-card (not nextElementSibling)
 (function songToggles() {
-  document.querySelectorAll(".toggle-songs").forEach(btn => {
-    const list = btn.nextElementSibling;
-    if (!list || !list.matches(".song-list")) return;
+  document.querySelectorAll(".toggle-songs").forEach((btn) => {
+    const card = btn.closest(".album-card");
+    const list = card ? card.querySelector(".song-list") : null;
+    if (!list) return;
+
+    // Start hidden (CSS covers this too)
+    list.setAttribute("hidden", "");
 
     btn.addEventListener("click", () => {
-      const open = list.style.display === "block";
-      list.style.display = open ? "none" : "block";
-      btn.textContent = open ? "View Songs ▼" : "Hide Songs ▲";
-      btn.setAttribute("aria-expanded", String(!open));
+      const isHidden = list.hasAttribute("hidden");
+      if (isHidden) {
+        list.removeAttribute("hidden");
+        btn.textContent = "Hide Songs ▲";
+        btn.setAttribute("aria-expanded", "true");
+      } else {
+        list.setAttribute("hidden", "");
+        btn.textContent = "View Songs ▼";
+        btn.setAttribute("aria-expanded", "false");
+      }
     });
   });
 })();
+
 
 /* -------------------- REVEAL ON SCROLL -------------------- */
 // Adds `.in` when elements enter the viewport.
