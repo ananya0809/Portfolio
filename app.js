@@ -76,31 +76,32 @@
   });
 })();
 
-// /* -------------------- SONG LIST TOGGLES -------------------- */
-// // Robust: find the list inside the same .album-card (not nextElementSibling)
-// (function songToggles() {
-//   document.querySelectorAll(".toggle-songs").forEach((btn) => {
-//     const card = btn.closest(".album-card");
-//     const list = card ? card.querySelector(".song-list") : null;
-//     if (!list) return;
+/* -------------------- SONG LIST TOGGLES -------------------- */
+// Robust: find the list inside the same .album-card (not nextElementSibling)
+(function songToggles() {
+  document.querySelectorAll(".toggle-songs").forEach((btn) => {
+    const card = btn.closest(".album-card");
+    const list = card ? card.querySelector(".song-list") : null;
+    if (!list) return;
 
-//     // Start hidden (CSS covers this too)
-//     list.setAttribute("hidden", "");
+    // Start hidden (HTML or CSS can also set [hidden]; we normalize here)
+    if (!list.hasAttribute("hidden")) list.setAttribute("hidden", "");
 
-//     btn.addEventListener("click", () => {
-//       const isHidden = list.hasAttribute("hidden");
-//       if (isHidden) {
-//         list.removeAttribute("hidden");
-//         btn.textContent = "Hide Songs ▲";
-//         btn.setAttribute("aria-expanded", "true");
-//       } else {
-//         list.setAttribute("hidden", "");
-//         btn.textContent = "View Songs ▼";
-//         btn.setAttribute("aria-expanded", "false");
-//       }
-//     });
-//   });
-// })();
+    btn.addEventListener("click", () => {
+      const isHidden = list.hasAttribute("hidden");
+      if (isHidden) {
+        list.removeAttribute("hidden");
+        btn.textContent = "Hide Songs ▲";
+        btn.setAttribute("aria-expanded", "true");
+      } else {
+        list.setAttribute("hidden", "");
+        btn.textContent = "View Songs ▼";
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+})();
+
 
 
 /* -------------------- REVEAL ON SCROLL -------------------- */
