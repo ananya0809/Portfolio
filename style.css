@@ -183,5 +183,47 @@ body{
 .contact-grid a:hover {
   color: #ffcc70; /* or any hover color you prefer */
 }
+.contact-form-container {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contact-form-container h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.contact-form-container label {
+  display: block;
+  margin-top: 1rem;
+  color: white;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.contact-form-container button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background: #00ffff;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form-container button:hover {
+  background: #ffcc70;
+}
 
 
