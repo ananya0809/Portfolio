@@ -114,32 +114,29 @@ body{
 /* Song list visibility + spacing */
 .song-list {
   list-style: none;
-  margin: .5rem 0 0 1rem;
+  margin: .35rem 0 0 1rem;
   padding-left: 0;
 }
 .song-list[hidden] {
   display: none !important;
 }
 
-.song-list li a { color: var(--text); text-decoration: none; }
-.song-list li a:hover { color: var(--gold); text-decoration: underline; 
-}
-/* .song-list li a {
+.song-list li a {
   color: var(--text);
   text-decoration: none;
 }
 .song-list li a:hover {
   color: var(--gold);
-  text-decoration: underline; */
-/* } */
-/* Contact page links - white */
+  text-decoration: underline; 
+}
+/* Contact page links - white
 #contact a {
   color: #fff;
 }
 
 #contact a:hover {
   color: #ccc; /* Softer white/grey on hover */
-}
+/* } */
 /* Contact links color override */
 #contact a {
   color: white;
