@@ -129,6 +129,50 @@ body{
   color: var(--gold);
   text-decoration: underline; 
 }
+/* Native details/summary toggle for tracklists */
+.song-toggle {
+  margin-top: .4rem;
+}
+.song-toggle summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: .35rem .6rem;
+  border: 2px solid rgba(255,255,255,.15);
+  border-radius: .6rem;
+  font-weight: 800;
+  color: var(--gold);
+  background: transparent;
+  user-select: none;
+}
+.song-toggle summary::-webkit-details-marker { display: none; }
+
+/* Change label when open */
+.song-toggle[open] summary span { color: var(--gold); }
+.song-toggle summary span::after {
+  content: "";
+}
+.song-toggle[open] summary span {
+  position: relative;
+}
+.song-toggle[open] summary span::after {
+  content: " ▲";
+}
+
+/* Track list styling */
+.song-list {
+  margin: .6rem 0 0 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+.song-list li a {
+  color: var(--text);
+  text-decoration: none;
+}
+.song-list li a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
 
 
 
