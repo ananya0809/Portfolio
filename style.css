@@ -185,6 +185,7 @@ body{
 }
 .contact-form-container {
   margin-top: 2rem;
+  margin-bottom: 3rem;
   background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
   border-radius: 8px;
@@ -216,7 +217,7 @@ body{
   margin-top: 1.5rem;
   padding: 0.8rem 2rem;
   background: #00ffff;
-  color: black;
+  color: rgb(125, 120, 120);
   border: none;
   border-radius: 4px;
   cursor: pointer;
