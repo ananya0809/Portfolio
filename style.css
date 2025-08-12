@@ -175,12 +175,12 @@ body{
 }
 
 /* Contact page link color override */
-#contact a {
+.contact-grid a {
   color: white;
   text-decoration: none;
 }
 
-#contact a:hover {
+.contact-grid a:hover {
   color: #ffcc70; /* or any hover color you prefer */
 }
 
