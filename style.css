@@ -335,5 +335,75 @@ body{
   margin: .25rem 0 1.25rem;
   font-size: .95rem;
 }
+/* Two-column layout for contact page */
+.contact-layout{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr; /* left: info, right: form */
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Left column */
+.contact-left .contact-info p{
+  margin: 0 0 .6rem 0;
+  font-size: 1.05rem;
+}
+.contact-left a{ color:#fff; text-decoration:none; }
+.contact-left a:hover{ color:#ffcc70; }
+
+/* Icon buttons already exist; just add a touch of spacing */
+.socials{ display:flex; gap:.75rem; align-items:center; margin-top: .75rem; }
+.icon-button{ width:46px; height:46px; }
+
+/* Right column (form card) — reused styles; ensure nice spacing */
+.contact-right .contact-form{ margin: 0; }
+.contact-form-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* Grid inside the form */
+.form-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:1.1rem 1rem; }
+.form-field{ display:flex; flex-direction:column; }
+.form-field-span2{ grid-column: span 2; }
+
+.form-field label{ font-weight: 700; margin-bottom:.35rem; }
+.form-field input, .form-field textarea{
+  width:100%; background:#111; color:#fff;
+  border:1px solid rgba(255,255,255,.12); border-radius:12px;
+  padding:.9rem 1rem; outline:none;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+.form-field input::placeholder, .form-field textarea::placeholder{ color:rgba(255,255,255,.45); }
+.form-field input:focus, .form-field textarea:focus{ border-color:#00ffff; box-shadow:0 0 0 3px rgba(0,255,255,.18); background:#0e0e0e; }
+
+.form-actions{ display:flex; align-items:center; gap:1rem; margin-top: .5rem; }
+.btn-primary{
+  appearance:none; border:none; cursor:pointer; font-weight:900; letter-spacing:.3px;
+  padding:.9rem 1.4rem; border-radius:999px; background:linear-gradient(90deg,#00e5ff,#00ffff);
+  color:#0b0b0b; box-shadow:0 12px 24px rgba(0,255,255,.25); transition:transform .08s, box-shadow .2s, filter .2s;
+}
+.btn-primary:hover{ transform:translateY(-1px); filter:brightness(1.03); }
+.btn-primary:active{ transform:translateY(0); box-shadow:0 6px 14px rgba(0,255,255,.18); }
+.form-note{ margin:0; opacity:.7; font-size:.92rem; }
+.hp{ display:none !important; }
+
+/* Make links white in the entire contact area */
+#contact a, .contact-layout a{ color:#fff; text-decoration:none; }
+#contact a:hover, .contact-layout a:hover{ color:#ffcc70; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .contact-layout{ grid-template-columns: 1fr; }
+  .icon-button{ width:44px; height:44px; }
+  .form-grid{ grid-template-columns: 1fr; }
+  .form-field-span2{ grid-column: span 1; }
+}
 
 
