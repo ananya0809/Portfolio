@@ -328,5 +328,12 @@ body{
 .contact-form-container button:hover {
   background: #ffcc70;
 } */
+/* Collaborations subsection */
+.collab-section { margin-top: 3rem; }
+.subtle-note {
+  color: var(--muted);
+  margin: .25rem 0 1.25rem;
+  font-size: .95rem;
+}
 
 
