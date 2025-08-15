@@ -235,7 +235,7 @@ body{
 }
 
 .managed-by a {
-    color: #00f5d4; /* matches your send button glow */
+    color: #cf7af7; /* matches your send button glow */
     text-decoration: none;
 }
 
@@ -259,5 +259,102 @@ body{
     radial-gradient(900px 500px at 10% -10%, rgba(122,77,255,.12), transparent 60%),
     radial-gradient(900px 600px at 95% 0%, rgba(255,86,199,.10), transparent 65%),
     linear-gradient(180deg,#faf7ff,#f2f1ff);
+}
+/* ---------- Form card polish ---------- */
+.contact-form-card{
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 18px;
+  padding: 1.25rem;            /* tighter to stop right-edge overflow */
+  box-shadow: 0 24px 48px rgba(5,3,12,.45);
+  overflow: hidden;            /* ensures shadows/inputs stay inside rounded corners */
+}
+
+.form-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1rem;              /* even spacing; fixes “squashed” feel */
+}
+
+.form-field{ display:flex; flex-direction:column; }
+.form-field-span2{ grid-column: span 2; }
+
+.form-field label{
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin-bottom: .45rem;
+  color: var(--text);
+}
+
+/* inputs with higher contrast + even radius */
+.form-field input,
+.form-field textarea{
+  width: 100%;
+  background: rgba(10, 9, 16, .9);     /* not pitch-black; reads better */
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  padding: .95rem 1rem;
+  outline: none;
+  transition: border-color .18s, box-shadow .18s, background .18s;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder{ color: rgba(255,255,255,.45); }
+
+.form-field input:focus,
+.form-field textarea:focus{
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--ring);
+  background: #0f0d1a;
+}
+
+/* footer inside the card (button + notes + manager line) */
+.form-footer{
+  margin-top: 1rem;
+  padding-top: .9rem;
+  border-top: 1px dashed rgba(255,255,255,.12);
+}
+
+.form-actions{
+  display:flex;
+  align-items:center;
+  gap: 1rem;
+  margin-bottom: .5rem;
+}
+
+.btn-primary{
+  padding: .9rem 1.35rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-3), var(--accent-2));
+  color:#0b0b0b;
+  font-weight: 900;
+  letter-spacing: .3px;
+  box-shadow: 0 14px 34px rgba(178,107,255,.28);
+  border: none;
+  cursor: pointer;
+  transition: transform .08s, box-shadow .2s, filter .2s;
+}
+.btn-primary:hover{ transform: translateY(-1px); filter: brightness(1.05); }
+.btn-primary:active{ transform: translateY(0); box-shadow: 0 10px 22px rgba(255,111,216,.24); }
+
+.form-note{ margin:0; opacity:.75; }
+
+/* manager line inside the card */
+.managed-by{
+  margin: .4rem 0 0;
+  color: var(--muted);
+  font-size: .96rem;
+}
+.managed-by a{
+  color: var(--accent-3);
+  text-decoration: none;
+}
+.managed-by a:hover{ text-decoration: underline; }
+
+/* responsive: stack to one column on narrow screens */
+@media (max-width: 860px){
+  .form-grid{ grid-template-columns: 1fr; }
+  .form-field-span2{ grid-column: span 1; }
 }
 

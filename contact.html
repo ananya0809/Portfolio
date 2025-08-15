@@ -56,34 +56,45 @@
     <div class="contact-right">
       <section class="contact-form">
         <h2 class="section-title">Send a Message</h2>
+
         <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form-card" novalidate>
           <input type="text" name="_gotcha" class="hp" autocomplete="off" tabindex="-1" aria-hidden="true">
+
           <div class="form-grid">
             <div class="form-field">
               <label for="cf-name">Full Name *</label>
               <input id="cf-name" name="name" type="text" required>
             </div>
+
             <div class="form-field">
               <label for="cf-email">Email ID *</label>
               <input id="cf-email" name="_replyto" type="email" required>
             </div>
+
             <div class="form-field form-field-span2">
               <label for="cf-phone">Phone Number (with country code)</label>
               <input id="cf-phone" name="phone" type="tel" placeholder="+91 12345 67890">
             </div>
+
             <div class="form-field form-field-span2">
               <label for="cf-message">Message *</label>
               <textarea id="cf-message" name="message" rows="6" required></textarea>
             </div>
           </div>
-          <div class="form-actions">
-            <button type="submit" class="btn-primary">Send</button>
-            <p class="form-note">You’ll get a confirmation email on first use.</p>
+
+          <div class="form-footer">
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Send</button>
+              <p class="form-note">You’ll get a confirmation email on first use.</p>
+            </div>
+
+            <p class="managed-by">
+              Managed by <strong>Ananya Agrawal</strong> —
+              <a href="tel:+919910619553">+91 99106 19553</a>
+            </p>
           </div>
         </form>
       </section>
-      <p class="managed-by">Managed by <strong>Ananya Agrawal</strong> — <a href="tel:+919910619553">+91 99106 19553</a></p>
-      <hr>
     </div>
   </div>
 </main>
