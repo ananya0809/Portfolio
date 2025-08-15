@@ -405,5 +405,7 @@ body{
   .form-grid{ grid-template-columns: 1fr; }
   .form-field-span2{ grid-column: span 1; }
 }
+#contact a, .contact-layout a { color:#fff; }
+#contact a:hover, .contact-layout a:hover { color:#ffcc70; }
 
 
