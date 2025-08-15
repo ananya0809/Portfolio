@@ -1,16 +1,35 @@
 /* ===== Theme & Base ===== */
+/* ===== Theme & Base (Purple–Magenta–Aqua) ===== */
 :root{
-  --bg:#0e0e0e; --surface:#141414; --text:#f2f2f2; --muted:#c6c6c6;
-  --accent:#00ffff; --gold:#ffcc70; --shadow:0 10px 24px rgba(0,0,0,.35);
+  /* Core palette pulled from the reference image */
+  --bg:#0b0714;          /* deep violet-black */
+  --surface:#131021;     /* card surface */
+  --text:#F5F3FA;        /* near-white with lilac hue */
+  --muted:#CFC7E6;       /* soft lavender for secondary text */
+
+  --accent:#B26BFF;      /* electric violet */
+  --accent-2:#FF6FD8;    /* neon magenta (used where “gold” was) */
+  --accent-3:#7EE7FF;    /* ice aqua highlight */
+
+  /* keep legacy var name so existing CSS keeps working */
+  --gold: var(--accent-2);
+
+  /* effects */
+  --ring: rgba(178,107,255,.36);
+  --glow: 0 14px 34px rgba(178,107,255,.28);
+  --shadow: 0 10px 24px rgba(5,3,12,.55);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
+
 body{
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background: linear-gradient(180deg,#0d0d0d,#1a1a1a);
+  background:
+    radial-gradient(1200px 700px at 10% -10%, rgba(178,107,255,.18), transparent 60%),
+    radial-gradient(1100px 600px at 100% 0%, rgba(255,111,216,.14), transparent 65%),
+    linear-gradient(180deg, #0b0714 0%, #101026 50%, #0d0c18 100%);
   color: var(--text);
   line-height: 1.6;
 }
+
 
 /* ===== Fixed Top Nav ===== */
 .topnav{
@@ -36,8 +55,12 @@ body{
 }
 .hero::before{
   content:""; position:absolute; inset:0;
-  background: linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.75));
+  background:
+    radial-gradient(800px 500px at 20% 10%, rgba(255,111,216,.35), transparent 60%),
+    radial-gradient(900px 600px at 85% 15%, rgba(126,231,255,.28), transparent 65%),
+    linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.72));
 }
+
 .hero-content{ position:relative; z-index:1; text-shadow:0 2px 10px rgba(0,0,0,.6) }
 .hero h1{ font-size: clamp(2.2rem,6vw,4rem) }
 .hero p{ color: var(--muted); margin-top: .4rem }
@@ -48,6 +71,10 @@ body{
   font-size:2rem; color:var(--accent); margin-bottom:1.25rem;
   border-bottom:1px solid rgba(255,255,255,.12); padding-bottom:.6rem;
 }
+.section-title{ color: var(--accent); }
+.links a{ color: var(--accent-3); }            /* nav links = aqua */
+.links a:hover{ color: var(--accent-2); }      /* hover = magenta */
+
 .lead{ color:#eaeaea }
 
 /* ===== Grids ===== */
@@ -61,7 +88,7 @@ body{
   background:var(--surface); border-radius:16px; padding:1.25rem;
   box-shadow:var(--shadow); transition:transform .25s ease, box-shadow .25s ease;
 }
-.album-card:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(0,255,255,.15) }
+.album-card:hover{ transform:translateY(-4px); box-shadow:0 16px 36px rgba(178,107,255,.22) }
 .album-media{ position:relative; overflow:hidden; border-radius:12px }
 .album-media img{ width:100%; aspect-ratio:1/1; object-fit:cover; display:block }
 .album-hover{
@@ -70,8 +97,10 @@ body{
 }
 .album-card:hover .album-hover{ opacity:1 }
 .pill{
-  background:var(--accent); color:#000; font-weight:800; text-decoration:none;
-  padding:.55rem .95rem; border-radius:999px; box-shadow:0 8px 18px rgba(0,255,255,.25)
+  background: linear-gradient(90deg, var(--accent-3), var(--accent));
+  color:#0b0b0b; font-weight:800; text-decoration:none;
+  padding:.55rem .95rem; border-radius:999px;
+  box-shadow: var(--glow);
 }
 .album-title{ margin:.9rem 0 .25rem }
 .album-title .tag{
@@ -139,17 +168,22 @@ body{
 }
 .form-field input::placeholder,.form-field textarea::placeholder{ color:rgba(255,255,255,.45) }
 .form-field input:focus,.form-field textarea:focus{
-  border-color:var(--accent); box-shadow:0 0 0 3px rgba(0,255,255,.18); background:#0e0e0e;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--ring);
+  background:#0f0d1a;
 }
+
 .form-actions{ display:flex; align-items:center; gap:1rem; margin-top:.5rem }
 .btn-primary{
   appearance:none; border:none; cursor:pointer; font-weight:900; letter-spacing:.3px;
   padding:.9rem 1.4rem; border-radius:999px;
-  background:linear-gradient(90deg,#00e5ff,#00ffff); color:#0b0b0b;
-  box-shadow:0 12px 24px rgba(0,255,255,.25); transition:transform .08s, box-shadow .2s, filter .2s;
+  background: linear-gradient(90deg, var(--accent-3), var(--accent-2));
+  color:#0b0b0b;
+  box-shadow: var(--glow);
+  transition:transform .08s, box-shadow .2s, filter .2s;
 }
-.btn-primary:hover{ transform:translateY(-1px); filter:brightness(1.03) }
-.btn-primary:active{ transform:translateY(0); box-shadow:0 6px 14px rgba(0,255,255,.18) }
+.btn-primary:hover{ transform:translateY(-1px); filter:brightness(1.05) }
+.btn-primary:active{ transform:translateY(0); box-shadow:0 10px 22px rgba(255,111,216,.24) }
 .form-note{ margin:0; opacity:.7; font-size:.92rem }
 .hp{ display:none !important }
 
@@ -207,5 +241,23 @@ body{
 
 .managed-by a:hover {
     text-decoration: underline;
+}
+/* ===== Light theme (optional) ===== */
+:root.light{
+  --bg:#faf7ff;
+  --surface:#ffffff;
+  --text:#1c1230;
+  --muted:#5d5177;
+  --accent:#7A4DFF;
+  --accent-2:#FF56C7;
+  --accent-3:#3EC9FF;
+  --ring: rgba(122,77,255,.28);
+  --glow: 0 14px 34px rgba(122,77,255,.22);
+}
+:root.light body{
+  background:
+    radial-gradient(900px 500px at 10% -10%, rgba(122,77,255,.12), transparent 60%),
+    radial-gradient(900px 600px at 95% 0%, rgba(255,86,199,.10), transparent 65%),
+    linear-gradient(180deg,#faf7ff,#f2f1ff);
 }
 
