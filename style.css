@@ -461,5 +461,78 @@ body{
 .socials-outline .icon-button[data-brand="apple"]:hover     { color: #FA243C; border-color: rgba(250,36,60,.45); }
 .socials-outline .icon-button[data-brand="amazon"]:hover    { color: #232F3E; border-color: rgba(35,47,62,.45); }
 .socials-outline .icon-button[data-brand="spotify"]:hover   { color: #1DB954; border-color: rgba(29,185,84,.45); }
+/* Social Icons Outline */
+.icon-button.outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.icon-button.outline svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+
+/* Tooltips */
+.icon-button.outline::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -28px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.icon-button.outline:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Brand hover colors */
+.icon-button.outline[data-brand="youtube"]:hover {
+  color: #FF0000;
+  border-color: #FF0000;
+}
+
+.icon-button.outline[data-brand="apple"]:hover {
+  color: #A2AAAD; /* Apple grey */
+  border-color: #A2AAAD;
+}
+
+.icon-button.outline[data-brand="amazon"]:hover {
+  color: #FF9900;
+  border-color: #FF9900;
+}
+
+.icon-button.outline[data-brand="instagram"]:hover {
+  color: #E1306C;
+  border-color: #E1306C;
+}
+
+.icon-button.outline[data-brand="spotify"]:hover {
+  color: #1DB954;
+  border-color: #1DB954;
+}
+
+.icon-button.outline[data-brand="linktree"]:hover {
+  color: #39e09b;
+  border-color: #39e09b;
+}
 
 
