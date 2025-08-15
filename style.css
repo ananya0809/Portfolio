@@ -194,3 +194,18 @@ body{
   transition:opacity .4s ease, transform .4s ease;
 }
 .in{ opacity:1 !important; transform:none !important }
+.managed-by {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.managed-by a {
+    color: #00f5d4; /* matches your send button glow */
+    text-decoration: none;
+}
+
+.managed-by a:hover {
+    text-decoration: underline;
+}
+
