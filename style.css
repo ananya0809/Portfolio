@@ -407,5 +407,59 @@ body{
 }
 #contact a, .contact-layout a { color:#fff; }
 #contact a:hover, .contact-layout a:hover { color:#ffcc70; }
+/* ——— Minimal Outline Social Icons ——— */
+.socials-outline .icon-button {
+  position: relative;
+  width: 56px; height: 56px;
+  display: inline-grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.18);
+  background: transparent;
+  color: #a8adb4;           /* subtle grey outline color */
+  transition: color .18s ease, border-color .18s ease, transform .12s ease;
+}
+.socials-outline .icon-button:hover { transform: translateY(-1px); }
+.socials-outline .icon-button:active { transform: translateY(0); }
+
+.socials-outline .icon-button svg {
+  width: 24px; height: 24px;
+  stroke: currentColor;        /* outline */
+  fill: none;                  /* no fill by default */
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Tooltips (CSS-only) */
+.socials-outline .icon-button::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%; bottom: calc(100% + 10px);
+  transform: translateX(-50%) translateY(6px);
+  opacity: 0; pointer-events: none;
+  background: rgba(0,0,0,.78);
+  color: #fff;
+  font-size: .78rem; font-weight: 600;
+  padding: .35rem .55rem;
+  border-radius: .45rem;
+  white-space: nowrap;
+  transition: opacity .15s ease, transform .15s ease;
+}
+.socials-outline .icon-button:hover::after,
+.socials-outline .icon-button:focus-visible::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Brand hover colors */
+.socials-outline .icon-button[data-brand="linktree"]:hover  { color: #43E55E; border-color: rgba(67,229,94,.5); }
+.socials-outline .icon-button[data-brand="instagram"]:hover {
+  /* Instagram gradient look using a color trick */
+  color: #E1306C; border-color: rgba(225,48,108,.5);
+}
+.socials-outline .icon-button[data-brand="youtube"]:hover   { color: #FF0000; border-color: rgba(255,0,0,.4); }
+.socials-outline .icon-button[data-brand="apple"]:hover     { color: #FA243C; border-color: rgba(250,36,60,.45); }
+.socials-outline .icon-button[data-brand="amazon"]:hover    { color: #232F3E; border-color: rgba(35,47,62,.45); }
+.socials-outline .icon-button[data-brand="spotify"]:hover   { color: #1DB954; border-color: rgba(29,185,84,.45); }
 
 
